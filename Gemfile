@@ -12,7 +12,21 @@ gem "puma", ">= 5.0"
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 
+# Use HAML for views
+gem "haml-rails"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
+
+  # Use RSpec for testing
+  gem "rspec-rails"
+end
+
+group :development do
+  # Use html2haml gem for converting view
+  gem "html2haml"
+
+  # Use web console
+  gem "web-console"
 end
